@@ -11,9 +11,9 @@ O SAR Tracker é uma solução tecnológica focada em combater a pesca ilegal, n
 
 ## Links 
 * **Repositório Público (GitHub):** 
-[Link Git Hub] (https://github.com/gustavoczmacedo-cyber/SAR-TRACKER) 
+[Link Git Hub](https://github.com/gustavoczmacedo-cyber/SAR-TRACKER) 
 * **Deploy da Aplicação:** 
-[Link Deploy] (https://sar-tracker-i2fpgnjmo-gustavoczmacedo-cybers-projects.vercel.app/)
+[Link Deploy](https://sar-tracker-i2fpgnjmo-gustavoczmacedo-cybers-projects.vercel.app/)
 
 ## Instalação do Projeto (Passo a Passo)
 Siga as instruções abaixo para rodar o projeto localmente:
