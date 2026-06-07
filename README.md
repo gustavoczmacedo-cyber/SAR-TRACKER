@@ -10,8 +10,10 @@
 O SAR Tracker é uma solução tecnológica focada em combater a pesca ilegal, não declarada e não regulamentada (INN). Utilizando simulações de dados de satélites de Radar de Abertura Sintética (SAR) e dados públicos de tráfego naval (AIS), nossa plataforma cruza informações para identificar embarcações que operam de forma clandestina com os rastreadores desligados (navios fantasmas), ajudando a proteger os oceanos e combater a predação de recursos marinhos.
 
 ## Links 
-* **Repositório Público (GitHub):** [Cole o link do seu GitHub aqui]
-* **Deploy da Aplicação:** [Cole o link do site no ar aqui]
+* **Repositório Público (GitHub):** 
+[https://github.com/gustavoczmacedo-cyber/SAR-TRACKER]
+* **Deploy da Aplicação:** 
+[https://sar-tracker-i2fpgnjmo-gustavoczmacedo-cybers-projects.vercel.app/]
 
 ## Instalação do Projeto (Passo a Passo)
 Siga as instruções abaixo para rodar o projeto localmente:
