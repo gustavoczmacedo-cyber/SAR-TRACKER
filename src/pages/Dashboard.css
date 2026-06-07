@@ -1,0 +1,98 @@
+.radar-container { 
+  position: relative; width: 100%; height: 500px; 
+  /* Fundo base oceânico mais profundo e azulado */
+  background: radial-gradient(circle at center, #061e3e 0%, #020617 100%);
+  border: 1px solid rgba(56, 189, 248, 0.5); border-radius: 16px; 
+  overflow: hidden; 
+  box-shadow: 0 0 60px rgba(56, 189, 248, 0.2) inset, 0 0 30px rgba(0,0,0,0.9); 
+}
+
+/* =========================================
+   SIMULAÇÃO DE MAR (Alta Visibilidade)
+   ========================================= */
+.radar-container::before, .radar-container::after {
+  content: '';
+  position: absolute;
+  width: 250%; height: 250%; 
+  top: -75%; left: -75%;
+  z-index: 0;
+}
+
+/* Primeira massa de água (Ciano Forte e Brilhante) */
+.radar-container::before {
+  background: radial-gradient(circle at center, transparent 30%, rgba(14, 165, 233, 0.4) 80%);
+  border-radius: 43% 47% 42% 48%;
+  box-shadow: inset 0 0 80px rgba(56, 189, 248, 0.6); 
+  animation: oceanWaves 10s infinite linear;
+}
+
+/* Segunda massa de água corrente (Contraste) */
+.radar-container::after {
+  background: radial-gradient(circle at center, transparent 40%, rgba(56, 189, 248, 0.3) 90%);
+  border-radius: 48% 42% 46% 45%;
+  animation: oceanWaves 14s infinite linear reverse;
+}
+
+@keyframes oceanWaves { 
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); } 
+}
+
+/* =========================================
+   RESTO DO RADAR (Grid, Scanner)
+   ========================================= */
+.radar-grid { 
+  position: absolute; width: 200%; height: 200%; 
+  background-image: linear-gradient(rgba(56, 189, 248, 0.25) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(56, 189, 248, 0.25) 1px, transparent 1px); 
+  background-size: 50px 50px; animation: moveGrid 15s linear infinite; z-index: 1; 
+}
+
+@keyframes moveGrid { 0% { transform: translate(0, 0); } 100% { transform: translate(-50px, -50px); } }
+
+.scanline { 
+  position: absolute; top: 0; left: 0; width: 100%; height: 3px; 
+  background: #38bdf8; box-shadow: 0 0 30px 15px rgba(56, 189, 248, 0.8); 
+  animation: scan 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite; z-index: 10; 
+}
+
+@keyframes scan { 0% { top: -10%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 110%; opacity: 0; } }
+
+/* =========================================
+   INTERATIVIDADE E MOVIMENTO DOS NAVIOS
+   ========================================= */
+.ship-dot { 
+  position: absolute; width: 32px; height: 32px; z-index: 20; 
+  display: flex; justify-content: center; align-items: center; 
+  cursor: pointer; 
+  /* Essa linha faz o navio deslizar em vez de "teletransportar" */
+  transition: top 1s linear, left 1s linear, transform 0.2s ease-in-out; 
+}
+.ship-dot:hover { transform: scale(1.3); z-index: 30; }
+
+.ship-legal svg { fill: #10b981; filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.9)); animation: floatShip 4s infinite ease-in-out; }
+.ship-ghost svg { fill: #ef4444; filter: drop-shadow(0 0 15px #ef4444); animation: pulseDanger 0.6s infinite alternate; }
+
+/* TRAVA DE MIRA (Quando clicado) */
+.ship-selected::after { 
+  content: ''; position: absolute; width: 65px; height: 65px; 
+  border: 2px dashed #f8fafc; border-radius: 50%; 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5) inset;
+  animation: targetLock 2s infinite linear; 
+}
+
+@keyframes targetLock { 
+  0% { transform: rotate(0deg) scale(1); opacity: 1; } 
+  50% { transform: rotate(180deg) scale(1.1); opacity: 0.5; } 
+  100% { transform: rotate(360deg) scale(1); opacity: 1; } 
+}
+
+.ship-id { 
+  position: absolute; top: 45px; color: #f8fafc; font-size: 11px; font-weight: 800; 
+  letter-spacing: 1px; background: rgba(0,0,0,0.8); padding: 4px 8px; 
+  border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); 
+  white-space: nowrap; pointer-events: none; 
+}
+
+@keyframes pulseDanger { 0% { transform: scale(1); filter: drop-shadow(0 0 15px #ef4444); } 100% { transform: scale(1.3); filter: drop-shadow(0 0 40px #ef4444); } }
+@keyframes floatShip { 0% { transform: translateY(0) scale(1); } 50% { transform: translateY(-10px) scale(1.05); } 100% { transform: translateY(0) scale(1); } }

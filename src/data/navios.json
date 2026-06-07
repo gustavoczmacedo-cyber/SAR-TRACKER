@@ -1,0 +1,66 @@
+[
+  {
+    "id": "NAV-001",
+    "nome": "Estrela do Mar",
+    "tipo": "Pesqueiro Autorizado",
+    "velocidade_nos": 12.5,
+    "sinal_ais_ativo": true,
+    "status": "Regular"
+  },
+  {
+    "id": "NAV-002",
+    "nome": "Desconhecido Alpha",
+    "tipo": "Não identificado",
+    "velocidade_nos": 16.0,
+    "sinal_ais_ativo": false,
+    "status": "ALERTA: Navio Fantasma"
+  },
+  {
+    "id": "NAV-003",
+    "nome": "Horizonte Azul",
+    "tipo": "Cargueiro",
+    "velocidade_nos": 8.2,
+    "sinal_ais_ativo": true,
+    "status": "Regular"
+  },
+  {
+    "id": "NAV-004",
+    "nome": "Sombra Noturna",
+    "tipo": "Pesqueiro Clandestino",
+    "velocidade_nos": 19.5,
+    "sinal_ais_ativo": false,
+    "status": "ALERTA: Navio Fantasma"
+  },
+  {
+    "id": "NAV-005",
+    "nome": "Gigante de Ferro",
+    "tipo": "Petroleiro",
+    "velocidade_nos": 10.0,
+    "sinal_ais_ativo": true,
+    "status": "Regular"
+  },
+  {
+    "id": "NAV-006",
+    "nome": "Brisa Suave",
+    "tipo": "Veleiro Privado",
+    "velocidade_nos": 6.5,
+    "sinal_ais_ativo": true,
+    "status": "Regular"
+  },
+  {
+    "id": "NAV-007",
+    "nome": "Fantasma Delta",
+    "tipo": "Escuna Modificada",
+    "velocidade_nos": 23.0,
+    "sinal_ais_ativo": false,
+    "status": "ALERTA: Navio Fantasma"
+  },
+  {
+    "id": "NAV-008",
+    "nome": "Guardião do Atlântico",
+    "tipo": "Navio de Pesquisa",
+    "velocidade_nos": 14.0,
+    "sinal_ais_ativo": true,
+    "status": "Regular"
+  }
+]

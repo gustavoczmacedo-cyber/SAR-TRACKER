@@ -1,0 +1,152 @@
+/* 1. GOOGLE FONTS & RESET CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* 2. VARIÁVEIS CSS */
+:root {
+  --bg-dark: #0f172a;
+  --bg-navbar: rgba(15, 23, 42, 0.95);
+  --text-light: #f8fafc;
+  --text-muted: #94a3b8;
+  --primary-blue: #38bdf8;
+  --danger-red: #ef4444;
+  --border-color: #1e293b;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 3. ESTRUTURA FLEXBOX E CONTEÚDO */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; 
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-container {
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* A CORREÇÃO MÁGICA DAS IMAGENS */
+.page-image {
+  width: 100%;        /* Força a imagem a caber na sua exata metade da tela */
+  max-width: 100%;    /* Impede a imagem de vazar o limite */
+  height: auto;       /* Mantém a proporção sem achatar */
+  border-radius: 12px;/* Deixa as bordas arredondadas e mais elegantes */
+  object-fit: cover;
+}
+
+/* --- NAVBAR STYLES --- */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--bg-navbar);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-light);
+}
+
+.logo span {
+  color: var(--primary-blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+.nav-link-destaque {
+  color: var(--danger-red);
+  border: 1px solid var(--danger-red);
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.nav-link-destaque:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* --- FOOTER STYLES --- */
+.footer-container {
+  text-align: center;
+  padding: 25px;
+  background-color: #020617;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. RESPONSIVIDADE COMPLETA */
+@media (max-width: 850px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .page-container > div {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    text-align: center;
+  }
+  
+  .page-image {
+    transform: none !important;
+    margin-bottom: 20px;
+  }
+}
