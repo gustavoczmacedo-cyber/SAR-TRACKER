@@ -1,4 +1,4 @@
-# 🛰️ SAR Tracker - Tecnologia em Órbita em Órbita
+# 🛰️ SAR Tracker - Tecnologia em Órbita
 
 **Global Solution 2026 - Engenharia de Software (FIAP)**
 **Tema:** Indústria Espacial: O Código que Move o Universo
@@ -11,9 +11,9 @@ O SAR Tracker é uma solução tecnológica focada em combater a pesca ilegal, n
 
 ## Links 
 * **Repositório Público (GitHub):** 
-[https://github.com/gustavoczmacedo-cyber/SAR-TRACKER]
+[Link Git Hub] (https://github.com/gustavoczmacedo-cyber/SAR-TRACKER) 
 * **Deploy da Aplicação:** 
-[https://sar-tracker-i2fpgnjmo-gustavoczmacedo-cybers-projects.vercel.app/]
+[Link Deploy] (https://sar-tracker-i2fpgnjmo-gustavoczmacedo-cybers-projects.vercel.app/)
 
 ## Instalação do Projeto (Passo a Passo)
 Siga as instruções abaixo para rodar o projeto localmente:
